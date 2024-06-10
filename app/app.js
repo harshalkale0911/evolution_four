@@ -22,7 +22,7 @@ app.use('/', indexRouter);
 
 // Home route
 app.get('/', (req, res) => {
-  res.send('home');
+  res.send('this is home page');
 });
 
 // Schedule data upload task
