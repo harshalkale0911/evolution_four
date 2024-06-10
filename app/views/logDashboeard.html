@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log Dashboard</title>
+  </head>
+  <body>
+    <h1>Dashboard</h1>
+    <form action="/logs" method="GET">
+      <label for="type">Filter by types: </label>
+      <select name="type" id="type">
+        <option value="">All options</option>
+        <option value="information">Information</option>
+        <option value="warn">Warning</option>
+        <option value="error">Error</option>
+        <option value="success">Success</option>
+      </select>
+      <button type="submit">Filter</button>
+    </form>
+    <ul>
+      <li></li>
+    </ul>
+  </body>
+</html>
