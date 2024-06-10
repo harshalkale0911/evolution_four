@@ -13,7 +13,7 @@ mongoose.connect(process.env.DB_CONNECT, {
   .catch(err => console.error("Could not connect to MongoDB:", err));
 
 // Set view engine
-app.set("view engine", 'ejs');
+app.set("view engine");
 
 // Routes
 const indexRouter = require('./routes/index');
