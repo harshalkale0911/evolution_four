@@ -19,9 +19,7 @@ app.set("view engine", );
 const indexRouter = require('./routes/index');
 app.use('/', indexRouter);
 
- app.get("/" , (req , res)=>{
-    console.log("this is Home") ;
- })
+
  
 cron.schedule('0 * * * *', () => {
     console.log('Running data upload task...');
