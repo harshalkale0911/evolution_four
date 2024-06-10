@@ -13,13 +13,15 @@ mongoose.connect(process.env.DB_CONNECT, {
   .catch(err => console.error("Could not connect to MongoDB:", err));
 
 // Set view engine
-app.set("view engine");
+app.set("view engine", );
 
 // Routes
 const indexRouter = require('./routes/index');
 app.use('/', indexRouter);
 
- 
+ app.get("/" , (req , res)=>{
+    console.log("this is Home") ;
+ })
  
 cron.schedule('0 * * * *', () => {
     console.log('Running data upload task...');
@@ -28,4 +30,4 @@ cron.schedule('0 * * * *', () => {
 
 // Start server
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
+app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));

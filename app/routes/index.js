@@ -1,9 +1,8 @@
 const express = require('express') ;
 const router = express.Router() ;
 const Log = require('../models/log') ;
-const logController = require('../controllers/logController');
-const dataController = require('../controllers/dataController');
- 
+
+// log dashboard routes 
 
 router.get('/logs' , async(req , res) =>{
     const {type} = req.query ;
@@ -19,21 +18,4 @@ router.get('/logs' , async(req , res) =>{
     res.render('logDashboard' , {logs}) ;
 })
 
- 
-
-// Log dashboard route with filtering options
-router.get('/logs', logController.getLogs);
-
-// Create new entry route
-router.post('/data', dataController.createData);
-
-// Update existing entry route
-router.put('/data/:id', dataController.updateData);
-
-// Delete entry route
-router.delete('/data/:id', dataController.deleteData);
-
-module.exports = router;
-
-
- 
+module.exports= router ;
